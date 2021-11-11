@@ -1,0 +1,27 @@
+<%- include('./header') %>
+<table class="table table-sm  table-bordered table-striped table-dark w-100 mt-3">
+  <tr>
+    <th>Patient Id </th>
+    <th>Patient Name </th>
+    <th>Patient Age </th>
+    <th>Patient Disease </th>
+    <th>Patient MobileNo </th>
+    <th>Patient Address </th>
+  </tr>
+
+ <% users.forEach((user)=>{ %>
+  <tr>
+    <td><%= user.patient_id %></td>
+    <td><%= user.patient_name %></td>
+    <td><%= user.patient_age %></td>
+    <td><%= user.patient_disease %></td>
+    <td><%= user.patient_mobileNo %></td>
+    <td><%= user.patient_address %></td>
+  </tr>
+
+<% }) %>
+</table>
+<a href="/admin" class="btn w-25 mt-5 bg-secondary d-block text-white">Back to HomePage</a>
+
+
+<%- include('./footer') %>

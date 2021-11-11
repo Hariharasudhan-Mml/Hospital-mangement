@@ -1,0 +1,30 @@
+<%-include('./header') %>
+<h2 class="display-2 text-light" >Welcome Admin</h2>
+<h5 class=" mb-3 text-white">Login in the System</h5>
+<div class="cards bg-info mt-3 me-3" >
+  <form action="/" method="post" class="pt-3 pe-3">
+    <div class="row mb-3">
+      <div class="col-2"
+      <label for="username" class="form-check-label">Email</label>
+    </div>
+      <div class="col-10">
+        <input type="email " name="username" class="form-control"  placeholder="Enter the Email"required autofocus />
+      </div>
+    </div>
+      <div class="row mb-3">
+        <div class="col-2">
+          <label for="password" class="form-check-label">Password</label>
+        </div>
+        <div class="col-10">
+      <input type="password" name="password" class="form-control" placeholder="Enter the Password" required />
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-6 offset-3">
+          <button type="submit" class="btn btn-outline-primary mb-3">Submit</button>
+        </div>
+      </div>
+    
+  </form>
+</div>
+<%-include('./footer') %>

@@ -1,0 +1,21 @@
+<%- include('./header') %>
+<div class="cards p-2 mt-3 bg-info">
+  <form action="<%=path%>" method="post" class="m-5">
+    <input
+      type="number"
+      name="id"
+      class="form-control mt-5"
+      placeholder="Enter patient's Id to <%=button%>"
+      required
+      autofocus
+    />
+    <button type="submit" class="btn bg-dark mt-3 text-white">
+      <%=button%>
+    </button>
+  </form>
+</div>
+<a href="/admin" class="btn btn-secondary d-block mb-5 w-50 mt-5"
+  >Back to HomePage</a
+>
+
+<%- include('./footer') %>

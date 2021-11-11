@@ -1,0 +1,91 @@
+<%-include('./header') %>
+<div class="cards bg-info mt-2 pt-1">
+<form action="/<%=path %>" method="post">
+    <div class="row mt-5">
+        <div class="col-3 offset-2">
+          <label for="patent_id" class="form-label">Patient Id</label>
+        </div>
+        <div class="col-5">
+          <input
+            type="number"
+            name="patient_id"
+            class="form-control"
+            value="<%=user.patient_id %>" 
+            required
+            autofocus
+          />
+        </div>
+      </div>
+      <div class="row mt-3">
+        <div class="col-3 offset-2">
+          <label for="patient_name">Patient Name</label>
+        </div>
+        <div class="col-5">
+          <input type="text" name="patient_name" class="form-control" value="<%=user.patient_name %>" required />
+        </div>
+      </div>
+      <div class="row mt-3">
+        <div class="col-3 offset-2">
+          <label for="patient_age">Patient Age</label>
+        </div>
+        <div class="col-5">
+          <input type="number" name="patient_age" class="form-control" value="<%=user.patient_age %>" required />
+        </div>
+      </div>
+  
+      <div class="row mt-3">
+        <div class="col-3 offset-2">
+          <label for="patient_address">Patient Address</label>
+        </div>
+        <div class="col-5">
+          <input
+            type="text"
+            name="patient_address"
+            class="form-control"
+            value="<%=user.patient_address %>" 
+            required
+          />
+        </div>
+      </div>
+      <div class="row mt-3">
+        <div class="col-3 offset-2">
+          <lable for="patient_mobileNo">Patient Mobile No</lable>
+        </div>
+        <div class="col-5">
+          <input
+            type="text"
+            name="patient_mobileNo"
+            class="form-control"
+            value="<%=user.patient_mobileNo %>" 
+            required
+          />
+        </div>
+      </div>
+      <div class="row mt-3">
+        <div class="col-3 offset-2">
+          <label for="patient_disease">Patient Disease</label>
+        </div>
+        <div class="col-5">
+          <input
+            type="text"
+            name="patient_disease"
+            class="form-control"
+            value="<%=user.patient_disease %>" 
+            required
+          />
+        </div>
+      </div>
+      <div class="row mt-3">
+        <button
+          type="submit"
+          class="btn btn-primary w-25 col-3 ms-auto me-auto mb-5"
+        >
+          Submit
+        </button>
+      </div>
+
+</form>
+</div>
+<a href="/admin" class="btn w-25 mt-5 bg-secondary d-block text-white">Back to HomePage</a>
+<%-include('./footer') %>
+

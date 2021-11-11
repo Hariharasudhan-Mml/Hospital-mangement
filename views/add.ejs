@@ -1,0 +1,90 @@
+<%- include('./header') %>
+
+<h2 class="display-6 text-light ">Add New Patient Here</h2>
+<div class="cards pt-3 bg-info">
+  <form action="/add" method="post">
+    <div class="row mt-5">
+      <div class="col-3 offset-2">
+        <label for="patent_id" class="form-label">Patient Id</label>
+      </div>
+      <div class="col-5">
+        <input
+          type="number"
+          name="patient_id"
+          class="form-control"
+          required
+          autofocus
+        />
+      </div>
+    </div>
+    <div class="row mt-3">
+      <div class="col-3 offset-2">
+        <label for="patient_name">Patient Name</label>
+      </div>
+      <div class="col-5">
+        <input type="text" name="patient_name" class="form-control" required />
+      </div>
+    </div>
+    <div class="row mt-3">
+      <div class="col-3 offset-2">
+        <label for="patient_age">Patient Age</label>
+      </div>
+      <div class="col-5">
+        <input type="number" name="patient_age" class="form-control" required />
+      </div>
+    </div>
+
+    <div class="row mt-3">
+      <div class="col-3 offset-2">
+        <label for="patient_address">Patient Address</label>
+      </div>
+      <div class="col-5">
+        <input
+          type="text"
+          name="patient_address"
+          class="form-control"
+          required
+        />
+      </div>
+    </div>
+    <div class="row mt-3">
+      <div class="col-3 offset-2">
+        <lable for="patient_mobileNo">Patient Mobile No</lable>
+      </div>
+      <div class="col-5">
+        <input
+          type="text"
+          name="patient_mobileNo"
+          class="form-control"
+          required
+        />
+      </div>
+    </div>
+    <div class="row mt-3">
+      <div class="col-3 offset-2">
+        <label for="patient_disease">Patient Disease</label>
+      </div>
+      <div class="col-5">
+        <input
+          type="text"
+          name="patient_disease"
+          class="form-control"
+          required
+        />
+      </div>
+    </div>
+    <div class="row mt-3">
+      <button
+        type="submit"
+        class="btn btn-primary w-25 col-3 ms-auto me-auto mb-5"
+      >
+        Submit
+      </button>
+    </div>
+  </form>
+</div>
+<a href="/admin" class="btn btn-secondary d-block mb-3 mt-3 w-50"
+  >Back to HomePage</a
+>
+
+<%- include('./footer') %>

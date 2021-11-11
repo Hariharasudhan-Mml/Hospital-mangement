@@ -1,0 +1,15 @@
+<%- include('./header') %>
+<h1 class="text-light">Admin Panel</h1>
+<nav class="cards bg-info">
+  <ul >
+    <div class="d-md-flex justify-content-around mt-3 ">
+    <li><a href="/add" class="btn cred-btn" >Add Patient</a></li>
+    <li><a href="/patients" class="btn  cred-btn">Patient's List</a></li>
+    <li><a href="/update" class="btn cred-btn">Update Patient</a></li>
+    <li><a href="/delete" class="btn cred-btn">Delete Patient</a></li>
+  </div>
+  </ul>
+</nav>
+<a href="/logout" class="btn btn-warning mt-5 d-block w-50 ms-auto me-auto">logout</a>
+
+<%- include('./footer') %>
