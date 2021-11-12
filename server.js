@@ -6,12 +6,11 @@ const passport = require("passport");
 const passportLocalMoongose = require("passport-local-mongoose");
 require("dotenv").config();
 
-
 const app = express();
 
 app.set("view engine", "ejs");
 app.use(bodyParser.urlencoded({ extended: true }));
-app.use('/public',express.static('public'));
+app.use("/public", express.static("public"));
 app.use(
   session({
     secret: "secret",
@@ -80,15 +79,14 @@ app.post("/", (req, res) => {
     }
   });
 });
-app.get('/logout',(req,res)=>{
-  if(req.isAuthenticated()){
+app.get("/logout", (req, res) => {
+  if (req.isAuthenticated()) {
     req.logout();
-    res.redirect('/')
-
-  }else{
-    res.redirect('/')
+    res.redirect("/");
+  } else {
+    res.redirect("/");
   }
-})
+});
 app.get("/admin", (req, res) => {
   if (req.isAuthenticated()) {
     res.render("admin");
@@ -207,18 +205,17 @@ app.get("/delete", (req, res) => {
 app.post("/delete", (req, res) => {
   Patient.findOneAndDelete({ patient_id: req.body.id }, (err, user) => {
     if (user) {
-     
       res.render("success", {
         type: "Deleted",
       });
-    }else{
+    } else {
       res.render("failure", {
         message: "No patient found with this Id",
       });
     }
   });
 });
-const port="5000"|| process.env.PORT ;
+const port = process.env.PORT || "5000";
 app.listen(port, (err) => {
   if (err) {
     console.log(err);
