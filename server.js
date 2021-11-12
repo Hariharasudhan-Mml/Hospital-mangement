@@ -218,7 +218,7 @@ app.post("/delete", (req, res) => {
     }
   });
 });
-const port="5000"|| process.env.port ;
+const port="5000"|| process.env.PORT ;
 app.listen(port, (err) => {
   if (err) {
     console.log(err);
