@@ -125,7 +125,7 @@ app.post("/add", (req, res) => {
 
 app.get("/patients", (req, res) => {
   if (req.isAuthenticated()) {
-    Patient.find({}).then((users) => {
+    Patient.find({}).sort({patient_id:1}).then((users) => {
       if (users) {
         res.render("list", {
           users: users,
